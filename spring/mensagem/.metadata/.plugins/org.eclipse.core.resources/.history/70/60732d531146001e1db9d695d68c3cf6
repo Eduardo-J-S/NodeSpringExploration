@@ -1,0 +1,37 @@
+package com.eduardojs.mensagem;
+
+import javax.swing.JOptionPane;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MensagemApplication {
+
+	public static void main(String[] args) {
+		//System.setProperty("java.awt.headless", "false");
+		SpringApplication.run(MensagemApplication.class, args);
+		//System.out.println("Primeiro projeto Spring Boot");
+		
+		//JOptionPane.showMessageDialog(null, "Primeiro projeto Spring Boot");
+	}
+	
+	//CRUD
+	
+	public void create() {
+		System.out.println("Criação de um registro");
+	}
+	
+	public void read() {
+		System.out.println("Leitura de um registro");
+	}
+	
+	public void update() {
+		System.out.println("Atualização de um registro");
+	}
+	
+	public void delete() {
+		System.out.println("Exclusão de um registro");
+	}
+
+}

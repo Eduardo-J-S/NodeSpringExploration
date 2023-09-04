@@ -2,10 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 	    <meta charset="UTF-8">
-	    <title>Adicionar/Atualizar Produto</title>
+	    <title>Produto por ID</title>
 	</head>
 	<body>
-		<h1>Detalhes Produto</h1>
+		<h1>Detalhes Produto por ID</h1>
 		<ul th:each="produtoUnico : ${produto}">
 			<li th:text="${produtoUnico.nome}"></li>
 			<li th:text="${produtoUnico.preco}"></li>

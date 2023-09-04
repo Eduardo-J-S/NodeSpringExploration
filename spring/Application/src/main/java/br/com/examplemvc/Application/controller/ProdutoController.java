@@ -22,18 +22,17 @@ public class ProdutoController {
 	
 	@GetMapping("/produtos/{id}")
 	public String exibirProduto(@PathVariable Long id, Model model) {
-	    // Aqui, você deve buscar o produto pelo ID no banco de dados usando o repository.
-
+	    // buscar o produto pelo ID no banco de dados usando o repository.
 	    Optional<Produto> produtoOptional = produtoRepository.findById(id);
 
 	    if (produtoOptional.isPresent()) {
 	        Produto produto = produtoOptional.get();
-	        // Adicione o produto ao modelo para que ele possa ser exibido na página.
+	        // Adicionar o produto ao modelo para que ele possa ser exibido na página.
 	        model.addAttribute("produto", produto);
 	    } else {
-	        // Lide com o caso em que o produto não foi encontrado (por exemplo, redirecione ou mostre uma mensagem de erro).
-	        // Você pode redirecionar para uma página de erro 404 ou fazer o que for apropriado para sua aplicação.
-	        return "redirect:/produtos"; // Redireciona de v	olta para a lista de produtos, por exemplo.
+	        // Lidar com o caso em que o produto não foi encontrado (por exemplo, redirecionar ou mostrar uma mensagem de erro).
+	        // ou redirecionar para uma página de erro 404 ou fazer o que for apropriado para a aplicação.
+	        return "redirect:/produtos"; // Redireciona de volta para a lista de produtos.
 	    }
 
 	    return "detalhes-produto";
@@ -54,8 +53,8 @@ public class ProdutoController {
     
     @PostMapping("/produtos")
     public String adicionarProduto(@ModelAttribute Produto produto) {
-        // Valide os dados do produto
-        // Salve o produto no banco de dados
+        // falta - Validar os dados do produto
+        // Salvar o produto no banco de dados
         produtoRepository.save(produto);
         return "redirect:/produtos";
     }

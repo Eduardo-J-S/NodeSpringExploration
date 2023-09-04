@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <title>Adicionar/Atualizar Produto</title>
+	</head>
+	<body>
+		<h1>Detalhes Produto</h1>
+		<ul th:each="produtoUnico : ${produto}">
+			<li th:text="${produtoUnico.nome}"></li>
+			<li th:text="${produtoUnico.preco}"></li>
+		</ul>
+	</body>
+</html>

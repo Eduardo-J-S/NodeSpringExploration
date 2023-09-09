@@ -1,5 +1,5 @@
 import { Router } from "express";
-import SelecaoController from "./app/controllers/selecaoController.js";
+import SelecaoController from "./app/controllers/SelecaoController.js";
 
 const router = Router();
 

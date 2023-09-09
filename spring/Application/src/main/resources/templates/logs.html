@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Logs</title>
+</head>
+<body>
+    <h1>Registros de Log</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Data e Hora</th>
+                <th>Nível</th>
+                <th>Origem</th>
+                <th>Mensagem</th>
+            </tr>
+        </thead>
+        <tbody>
+             <tr th:each="log : ${logs}">
+		        <td th:text="${log.timestamp}"></td>
+		        <td th:text="${log.level}"></td>
+		        <td th:text="${log.source}"></td>
+		        <td th:text="${log.message}"></td>
+   			 </tr>
+        </tbody>
+    </table>
+</body>
+</html>
